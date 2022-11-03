@@ -1,8 +1,10 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
 
+const DATABASE_URL = process.env.DATABASE_URL;
 async function connect() {
     try {
-        await mongoose.connect(process.env.DATABASE_URL, {
+        await mongoose.connect(DATABASE_URL, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
             useFindAndModify: false,
@@ -10,9 +12,9 @@ async function connect() {
             retryWrites: true,
         });
 
-        console.log('Connect success');
+        console.log('Mongodb connect success');
     } catch (error) {
-        console.log('Connect failed');
+        console.log('Mongodb connect failed');
     }
 }
 

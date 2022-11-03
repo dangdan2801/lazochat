@@ -1,4 +1,4 @@
-# Zelo App Chat - NodeJs
+# Lazo App Chat - NodeJs
 
 ## Cách chạy
 

@@ -13,7 +13,6 @@ class CommonInfoController {
             } else {
                 webInfo = await redisDb.get('web-info');
             }
-            // console.log(webInfo);
             res.json(webInfo);
         } catch (err) {
             next(err);
