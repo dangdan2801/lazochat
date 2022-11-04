@@ -2,12 +2,15 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const http = require('http');
+const https = require("https");
 const routes = require('./routes');
 const db = require('./config/db');
 const socketio = require('socket.io');
 const socket = require('./helpers/socket');
 const handleErr = require('./middleware/handleErr');
 const morgan = require('morgan');
+const fs = require("fs");
+
 
 const port = process.env.PORT;
 
@@ -22,8 +25,22 @@ app.use(useragent.express());
 app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 app.use(express.json({ limit: '50mb' }));
 
-const server = http.createServer(app);
-const io = socketio(server);
+const key = fs.readFileSync("./https/private.key");
+const cert = fs.readFileSync("./https/certificate.crt");
+const cred = {
+  key,
+  cert,
+};
+
+// const server = http.createServer(app);
+const server = https.createServer(cred, app);
+
+const io = socketio(server, {
+  cors: {
+    origin: "*",
+    credentials: true,
+  },
+});
 socket(io);
 routes(app, io);
 

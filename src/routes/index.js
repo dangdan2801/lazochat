@@ -5,6 +5,7 @@ const stickerRouter = require('./sticker');
 const stickerManagerRouter = require('./stickerManager');
 const userManagerRouter = require('./userManager');
 const commonInfoRouter = require('./commonInfo');
+const siteRouter = require('./site.route');
 
 const auth = require('../middleware/auth');
 const adminAuth = require('../middleware/adminAuth');
@@ -34,6 +35,7 @@ const route = (app, io) => {
     app.use('/admin/users-manager', auth, adminAuth, userManagerRouter);
     app.use('/common', commonInfoRouter);
     app.use('/test', test);
+    app.use('', siteRouter);
 };
 
 module.exports = route;
