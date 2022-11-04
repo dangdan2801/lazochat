@@ -180,7 +180,7 @@ const templateHtml = {
             '          <!-- Logo -->\n' +
             '          <tr>\n' +
             '            <td class="email-masthead">\n' +
-            '              <a class="email-masthead_name">Zelo App Chat</a>\n' +
+            '              <a class="email-masthead_name">Lazo App Chat</a>\n' +
             '            </td>\n' +
             '          </tr>\n' +
             '          <!-- Email Body -->\n' +
@@ -201,7 +201,7 @@ const templateHtml = {
             '                        </td>\n' +
             '                      </tr>\n' +
             '                    </table>\n' +
-            '                    <p>Vì lí do bảo mật, tuyệt đối không đưa mã này cho người lạ.<br>Zelo App Chat</p>\n' +
+            '                    <p>Vì lí do bảo mật, tuyệt đối không đưa mã này cho người lạ.<br>Lazo App Chat</p>\n' +
             '                  </td>\n' +
             '                </tr>\n' +
             '              </table>\n' +

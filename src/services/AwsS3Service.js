@@ -21,7 +21,7 @@ class AwsS3Service {
         const uploadParams = {
             Bucket: bucketName,
             Body: fileStream,
-            Key: `zelo-${Date.now()}-${file.originalname}`,
+            Key: `lazo-${Date.now()}-${file.originalname}`,
         };
 
         const { mimetype } = file;
@@ -53,7 +53,7 @@ class AwsS3Service {
         const uploadParams = {
             Bucket: BucketName,
             Body: fileBuffer,
-            Key: `zelo-${Date.now()}-${fileName}${fileExtension}`,
+            Key: `lazo-${Date.now()}-${fileName}${fileExtension}`,
         };
 
         if (fileExtension === '.png') uploadParams.ContentType = 'image/png';

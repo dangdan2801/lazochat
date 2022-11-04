@@ -1,5 +1,5 @@
 const WebInfo = require('../models/WebInfo');
-const redisDb = require('../app/redis');
+const redisDb = require('../helpers/redis');
 
 // /common
 class CommonInfoController {

@@ -1,4 +1,4 @@
-# Lazo App Chat - NodeJs
+# lazo App Chat - NodeJs
 
 ## Cách chạy
 

@@ -1,5 +1,5 @@
 const meService = require('../services/MeService');
-const redisDb = require('../app/redis');
+const redisDb = require('../helpers/redis');
 
 // /me
 class MeController {

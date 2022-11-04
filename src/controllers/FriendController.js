@@ -1,5 +1,5 @@
 const friendService = require('../services/FriendService');
-const redisDb = require('../app/redis');
+const redisDb = require('../helpers/redis');
 
 // /friends
 class FriendController {

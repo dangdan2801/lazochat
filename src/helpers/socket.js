@@ -1,4 +1,4 @@
-const redisDb = require('../helpers/redisedis');
+const redisDb = require('./redis');
 const lastViewService = require('../services/LastViewService');
 
 const handleLeave = async (userId) => {

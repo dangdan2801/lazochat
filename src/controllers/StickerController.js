@@ -1,5 +1,5 @@
 const stickerService = require('../services/StickerService');
-const redisDb = require('../app/redis');
+const redisDb = require('../helpers/redis');
 
 class StickerController {
     async getAll(req, res, next) {

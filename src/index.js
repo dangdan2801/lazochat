@@ -5,7 +5,7 @@ const http = require('http');
 const routes = require('./routes');
 const db = require('./config/db');
 const socketio = require('socket.io');
-const socket = require('./app/socket');
+const socket = require('./helpers/socket');
 const handleErr = require('./middleware/handleErr');
 const morgan = require('morgan');
 

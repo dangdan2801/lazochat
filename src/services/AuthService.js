@@ -10,7 +10,7 @@ const tokenUtils = require('../utils/tokenUtils');
 const templateHtml = require('../utils/templateHtml');
 const axios = require('axios');
 const OTP_EXPIRE_MINUTE = parseInt(process.env.OTP_EXPIRE_MINUTE);
-const authenConstant = require('../constant/authenConstant');
+const authenConstant = require('../constant/authen.constant');
 
 class AuthService {
     async login(username, password, source) {
@@ -147,7 +147,7 @@ class AuthService {
         if (type)
             mailer.sendMail(
                 username,
-                'Zelo - OTP xác nhận tài khoản',
+                'Lazo - OTP xác nhận tài khoản',
                 templateHtml.getOtpHtml(otp, OTP_EXPIRE_MINUTE)
             );
         else {
@@ -160,7 +160,7 @@ class AuthService {
                 await axios.get(process.env.PHONE_OTP_API_URL, {
                     params: {
                         Phone: username,
-                        Content: `Zelo - Ma OTP (thoi han ${OTP_EXPIRE_MINUTE} phut) xac nhan tai khoan  la: ${otp} `,
+                        Content: `Lazo - Ma OTP (thoi han ${OTP_EXPIRE_MINUTE} phut) xac nhan tai khoan  la: ${otp} `,
                         ApiKey: process.env.PHONE_API_KEY,
                         SecretKey: process.env.PHONE_API_SECRET,
                         SmsType: 8,

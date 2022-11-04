@@ -35,7 +35,7 @@ let storage = multer.diskStorage({
             return callback(errorMess, null);
         }
 
-        let filename = `${Date.now()}-zelo-${file.originalname}`;
+        let filename = `${Date.now()}-lazo-${file.originalname}`;
         callback(null, filename);
     },
 });

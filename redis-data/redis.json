@@ -5,7 +5,7 @@
         },
         "name": "infoweb",
         "value": {
-            "image": "https://zelo-data-store.s3.ap-southeast-1.amazonaws.com/zelo-1638437348255-web_intro.png",
+            "image": "https://lazo-data-store.s3.ap-southeast-1.amazonaws.com/lazo-1638437348255-web_intro.png",
             "title": "Dễ sử dụng và là giải pháp hiệu quả trong việc trò chuyện, trao đổi làm việc nhóm ",
             "desciption": [
                 "Đồng bộ tin nhắn với điện thoại",
@@ -27,8 +27,8 @@
         "value": {
             "title": "Ứng dụng trò chuyện trực tuyến",
             "linkDownload": "",
-            "image": "https://zelo-data-store.s3.ap-southeast-1.amazonaws.com/zelo-1638433339837-phone.png",
-            "appname": "Zelo",
+            "image": "https://lazo-data-store.s3.ap-southeast-1.amazonaws.com/lazo-1638433339837-phone.png",
+            "appname": "lazo",
             "description": "Ứng dụng vô cùng tiện ích trong việc chat nhóm, trao đổi công việc, chia sẻ đa phương tiện"
         }
     },
@@ -83,19 +83,19 @@
         "value": [
             {
                 "title": "Chat nhóm",
-                "image": "https://zelo-data-store.s3.ap-southeast-1.amazonaws.com/zelo-1638435371889-inapp-welcome-screen-02.7f8cab265c34128a01a19f3bcd5f327a.jpg",
+                "image": "https://lazo-data-store.s3.ap-southeast-1.amazonaws.com/lazo-1638435371889-inapp-welcome-screen-02.7f8cab265c34128a01a19f3bcd5f327a.jpg",
                 "descrpition": "Tạo cuộc trò chuyện với nhiều thành viên, tiện ích trong việc làm việc nhóm",
                 "id": "1"
             },
             {
                 "title": "Giải quyết công việc hiệu quả",
-                "image": "https://zelo-data-store.s3.ap-southeast-1.amazonaws.com/zelo-1638435897181-cong%20viec.jpg",
+                "image": "https://lazo-data-store.s3.ap-southeast-1.amazonaws.com/lazo-1638435897181-cong%20viec.jpg",
                 "descrpition": "Giải quyết công việc hiệu quả hơn với các chức năng như ghim tin nhắn, tạo cuộc khảo sát, tạo kênh trò chuyện",
                 "id": "2"
             },
             {
                 "title": "Chia sẻ đa phương tiện",
-                "image": "https://zelo-data-store.s3.ap-southeast-1.amazonaws.com/zelo-1638436090819-da%20phuong%20tien.jpg",
+                "image": "https://lazo-data-store.s3.ap-southeast-1.amazonaws.com/lazo-1638436090819-da%20phuong%20tien.jpg",
                 "descrpition": "Chỉa sẻ hình ảnh, video và một số định dạng file khác như .zip, .rar, .pdf...",
                 "id": "3"
             }
