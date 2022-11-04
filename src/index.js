@@ -11,8 +11,6 @@ const handleErr = require('./middleware/handleErr');
 const morgan = require('morgan');
 const fs = require('fs');
 
-const port = process.env.PORT;
-
 const app = express();
 const useragent = require('express-useragent');
 db.connect();
@@ -24,22 +22,33 @@ app.use(useragent.express());
 app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 app.use(express.json({ limit: '50mb' }));
 
-// config https
-const key = fs.readFileSync('./https/private.key');
-const cert = fs.readFileSync('./https/certificate.crt');
-
-const server = https.createServer({
-  key: key,
-  cert: cert,
-}, app);
-
-// const server = http.createServer(app);
+// http
+const server = http.createServer(app);
 const io = socketio(server);
 socket(io);
 routes(app, io);
 
 app.use(handleErr);
 
-server.listen(port, function () {
-  console.log('App listening at http://localhost:' + port);
+const HTTP_PORT = process.env.HTTP_PORT || 80;
+server.listen(HTTP_PORT, function () {
+  console.log('App listening at http://localhost:' + HTTP_PORT);
+});
+
+// https
+const key = fs.readFileSync('./https/private.key');
+const cert = fs.readFileSync('./https/certificate.crt');
+
+const serverHttps = https.createServer({
+  key,
+  cert,
+}, app);
+
+const ioHttps = socketio(serverHttps);
+socket(ioHttps);
+routes(app, ioHttps);
+
+const HTTPS_PORT = process.env.HTTPS_PORT || 443;
+serverHttps.listen(HTTPS_PORT, function () {
+  console.log('App https listening at http://localhost:' + HTTPS_PORT);
 });
